@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <title>Aggiungi Libro</title>
+    <link rel="stylesheet" href="../CSS/style aggiungi libro.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="button-container">
+        <a href="index.html"><button>Torna alla Libreria</button></a>
+      </div>
+      <h1>My Library</h1>
+      <div id="libreria"></div>
+    </header>
+
+    <main>
+      <div id="container">
+        <h1>📓AGGIUNGI UN NUOVO LIBRO!📓</h1>
+
+        <form id="book-form">
+          <p>
+            Se non sai dove reperire gli URL, usa provadorso.jpg e
+            provacopertina.jpg
+          </p>
+
+          <label for="dorso">URL Immagine Dorso: </label>
+          <input
+            type="text"
+            id="dorso"
+            placeholder="Inserisci URL immagine"
+            required
+            autocomplete="off"
+          />
+
+          <label for="copertina">URL Immagine Copertina:</label>
+          <input
+            type="text"
+            id="copertina"
+            placeholder="Inserisci URL immagine"
+            required
+            autocomplete="off"
+          />
+
+          <label for="titolo">Titolo del Libro:</label>
+          <input
+            type="text"
+            id="titolo"
+            placeholder="Inserisci il Titolo del Libro"
+            required
+            autocomplete="off"
+          />
+
+          <div id="addBook">
+            <button type="submit">Aggiungi Libro</button>
+          </div>
+        </form>
+      </div>
+    </main>
+
+    <script src="aggiungi.js"></script>
+  </body>
+</html>

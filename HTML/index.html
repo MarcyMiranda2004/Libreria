@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>LIBRERIA</title>
+    <link rel="stylesheet" href="../CSS/style principale.css" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="button-container">
+        <a href="aggiungiLibro.html" class="button"
+          ><button>Aggiungi Libro</button></a
+        >
+        <a href="rimuoviLibro.html" class="button"
+          ><button>Rimuovi Libro</button></a
+        >
+        <a href="#" class="button"><button>Modifica Libreria</button></a>
+      </div>
+      <h1>My Library</h1>
+      <div id="libreria"></div>
+    </header>
+
+    <script>
+      const libreria = JSON.parse(localStorage.getItem("libreria")) || [];
+      const libreriaContainer = document.getElementById("libreria");
+
+      libreria.forEach((libro) => {
+        const bookDiv = document.createElement("div");
+        bookDiv.className = "book";
+
+        bookDiv.innerHTML = `
+                    <img class="dorso" src="${libro.dorso}" alt="Dorso del Libro">
+                    <img class="copertina" src="${libro.copertina}" alt="Copertina del Libro">
+                    <p>${libro.titolo}</p>
+                `;
+        libreriaContainer.appendChild(bookDiv);
+      });
+    </script>
+  </body>
+</html>

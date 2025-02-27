@@ -1,0 +1,45 @@
+<html>
+  <head>
+    <title>Rimuovi Libro</title>
+    <link rel="stylesheet" href="../CSS/style rimuovi libro.css" />
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div class="button-container">
+        <a href="index.html"><button>Torna alla Libreria</button></a>
+      </div>
+      <h1>My Library</h1>
+      <div id="libreria"></div>
+    </header>
+
+    <main>
+      <div id="container">
+        <h1>Rimuovi un Libro</h1>
+
+        <form id="search-form">
+          <label for="search-title">cerca un Libro:</label>
+          <input
+            type="text"
+            id="search-title"
+            placeholder="Inserisci il titolo del libro"
+            required
+            autocomplete="off"
+          />
+          <button type="submit" id="searchBook">Cerca Libro</button>
+        </form>
+
+        <div id="search-results"></div>
+      </div>
+    </main>
+
+    <script src="rimuovi.js"></script>
+  </body>
+</html>
